@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<p>API Key: {{api_key}}</p>
+<form method="post" action="{{url_for('report')}}" enctype="multipart/form-data">
+    <p>Latitude: <input type="text" name="latitude"></p>
+    <p>Longitude: <input type="text" name="longitude"></p>
+    <p>Description: <input type="text" name="description"></p>
+    <p>Filename: <input name="file1" type="file"><br></p>
+    <p><input type="hidden" name="api_key" value="{{api_key}}"></p>
+    <p><input type="submit" value="Submit"></p>
+</form>
+<p><a href="/"><button type="button">Logout</button></a></p>
+{% endblock content %}
