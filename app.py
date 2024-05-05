@@ -20,7 +20,6 @@ def generate_api_key():
 
 # Function to get state and country from latitude and longitude using reverse geocoding API
 def get_location_data(latitude, longitude):
-    # Example API (replace with your preferred API)
     url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&format=json&apiKey=146c75d7aeb743f89cf5c5267d349f0f'
     response = requests.get(url)
     data = response.json()
@@ -35,7 +34,6 @@ def get_my_ip():
 
 # Function to get weather data based on latitude and longitude
 def get_weather_data(latitude, longitude):
-    # Example API (replace with your preferred weather API)
     url = f'https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m,relative_humidity_2m,rain,wind_speed_10m'
     response = requests.get(url)
     data = response.json()
@@ -43,7 +41,7 @@ def get_weather_data(latitude, longitude):
 
 # Function to categorize description
 def categorize_description(description):
-    # Example logic for categorization
+
     if 'dangerous' in description.lower():
         return 'dangerous'
     elif 'offensive' in description.lower():
@@ -210,7 +208,6 @@ def get_data():
         return jsonify(data)
     else:
         # Return HTML response
-        # return render_template("data.html", data=data)
         htmltable = convert_to_html_table(data)
         return htmltable
 
@@ -226,7 +223,6 @@ def generate_csv(data):
 
 def convert_to_html_table(data):
     try:
-        # html_table = ""
         html_table = "<table border='1'><tr><th>Report ID</th><th>User ID</th><th>Entry Date</th><th>Latitude</th><th>Longitude</th><th>Description</th><th>Path</th><th>County</th><th>State</th><th>Username</th><th>Temperature</th><th>Humidity</th><th>Wind Speed</th><th>Rainfall</th><th>Category</th><th>IP Address</th></tr>"
         for row in data:
             html_table += "<tr>"
