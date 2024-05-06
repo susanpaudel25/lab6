@@ -19,8 +19,9 @@ def generate_api_key():
     return str(uuid.uuid4())
 
 # Function to get state and country from latitude and longitude using reverse geocoding API
+apikey = open("data/apikey.txt").read()
 def get_location_data(latitude, longitude):
-    url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&format=json&apiKey=146c75d7aeb743f89cf5c5267d349f0f'
+    url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&format=json&apiKey={apikey}'
     response = requests.get(url)
     data = response.json()
 
