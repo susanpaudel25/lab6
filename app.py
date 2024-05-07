@@ -18,7 +18,7 @@ app = Flask(__name__)
 def generate_api_key():
     return str(uuid.uuid4())
 
-# Function to get state and country from latitude and longitude using reverse geocoding API
+# Function to get state and county from latitude and longitude using reverse geocoding API
 apikey = open("data/apikey.txt").read()
 def get_location_data(latitude, longitude):
     url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&format=json&apiKey={apikey}'
@@ -153,7 +153,7 @@ def report():
 def get_data():
     output_format = request.args.get('output', 'html')
     start_date = request.args.get('start_date', '2024-05-02 17:30:50.910834')
-    end_date = request.args.get('end_date', '2024-05-04 17:31:50.910834')
+    end_date = request.args.get('end_date', '2024-05-08 17:31:50.910834')
     lat = request.args.get('lat', 30)
     lng = request.args.get('lng', 90)
     dist = request.args.get('dist', 10000000)

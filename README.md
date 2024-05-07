@@ -7,5 +7,8 @@
 - The csv file is returned in the downloaded version in data, probably not the link format asked in the question.
 - Other parts completed.
 
+# Link to the github repository where the work is located 
+ https://github.com/susanpaudel25/lab6
+ 
 # Link to the screen recording explaining the work
 
