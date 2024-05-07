@@ -9,6 +9,9 @@
 
 # Link to the github repository where the work is located 
  https://github.com/susanpaudel25/lab6
- 
-# Link to the screen recording explaining the work
 
+# Link to the screen recording explaining the work
+https://outlookuga-my.sharepoint.com/:v:/g/personal/sp80627_uga_edu/EVnOPJcpxB1Knbs4OiM2BHUBQaSzxSGTUUCi9Hefr8biNw?referrer=Teams.TEAMS-ELECTRON&referrerScenario=MeetingChicletGetLink.view.view
+
+# youtube link (incase the above outlook link doesnot work)
+https://www.youtube.com/watch?v=PWfgOwHQL3I&ab_channel=SusanPaudel
